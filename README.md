@@ -43,5 +43,5 @@ We use Gitflow, so master branch is reserved for releases.
 4. __Install [ROS kinetic](http://www.ros.org/install/) ros-kinetic-desktop-full__
 5. __Install Cuda_ 9.0 and cuDNN__
 
-Please follow [Guideline](https://github.com/fpt-corp/DiRa/blob/master/DiRa_Digital_Race_Software/Jetson_TX2/Document/cuda_installation_on_ubuntu_18.md)
+* Please follow [Guideline](https://github.com/fpt-corp/DiRa/blob/master/DiRa_Digital_Race_Software/Jetson_TX2/Document/cuda_installation_on_ubuntu_18.md)
 
