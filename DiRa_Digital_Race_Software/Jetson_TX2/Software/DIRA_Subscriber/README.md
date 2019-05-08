@@ -1,15 +1,15 @@
 # Mqtt Subscriber
-Mã nguồn subscriber bản tin lộ trình từ server
+Source code subscriber messages from the server mqtt
 
-id: thứ tự bốc thăm của đội khi thi đấu, mặc định là 1,
-server ip: 192.168.1.123, mặc định là localhost.
+id: Order to draw your team, default: 1.
+server ip: 192.168.1.123, default: localhost.
 
-Script pub mqtt để test ROS: /scripts/server_publish_demo.py
+Script pub mqtt for test ROS: /scripts/server_publish_demo.py
 
-Script nhận mqtt -> publish ROS topic: /route
-  * data: lộ trình, vd: 1-2-3-4-5
+Script receive mqtt -> publish ROS topic: /route
+  * data: route, ex: 5-1-2-3-4-5
   
 Run script: rosrun subscriber publish.py
 
-## Cài đặt
+## Install
 >  pip install paho-mqtt
