@@ -31,7 +31,7 @@ We use Gitflow, so master branch is reserved for releases.
 2.7. [Autonomous Driving in Simulation](#7-autonomous-driving-in-simulation)
 
 ### 2.1. Install Prerequisites
-1. __Install [Ubuntu 18.04 64-bit](https://www.ubuntu.com/download/desktop)__
+1. __Install [Ubuntu 16.04 64-bit](https://www.ubuntu.com/download/desktop)__
 2. __Install required packages__
     
 * ```sudo apt-get install git doxygen openssh-server libusb-dev texinfo```
