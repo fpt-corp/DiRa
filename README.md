@@ -56,21 +56,21 @@ We use Gitflow, so master branch is reserved for releases.
 #### 2.1.2 Embedded computer (Jetson TX2)
 1. __Install [ROS kinetic](https://github.com/jetsonhacks/installROSTX2)__
 
-```
+	```
 	git clone https://github.com/jetsonhacks/installROSTX2
 	cd installROSTX2
 	./installROS.sh
 	./setupCatkinWorkspace.sh
-```
+	```
 2. __Install driver for [astra camera](http://wiki.ros.org/astra_camera)__
-```
+	```
 	cd  /etc/udev/rules.d/
 	sudo gedit 56-orbbec.rules
-```
+	```
 
 * Copy the following lines:
-
-```
+	
+	```
 	SUBSYSTEM=="usb", ATTR{idProduct}=="0400", ATTR{idVendor}=="2bc5", MODE:="0666", OWNER:="root", GROUP:="video"
 	SUBSYSTEM=="usb", ATTR{idProduct}=="0401", ATTR{idVendor}=="2bc5", MODE:="0666", OWNER:="root", GROUP:="video"
 	SUBSYSTEM=="usb", ATTR{idProduct}=="0402", ATTR{idVendor}=="2bc5", MODE:="0666", OWNER:="root", GROUP:="video"
@@ -82,17 +82,17 @@ We use Gitflow, so master branch is reserved for releases.
 	SUBSYSTEM=="usb", ATTR{idProduct}=="0408", ATTR{idVendor}=="2bc5", MODE:="0666", OWNER:="root", GROUP:="video"
 	SUBSYSTEM=="usb", ATTR{idProduct}=="0409", ATTR{idVendor}=="2bc5", MODE:="0666", OWNER:="root", GROUP:="video"
 	SUBSYSTEM=="usb", ATTR{idProduct}=="040a", ATTR{idVendor}=="2bc5", MODE:="0666", OWNER:="root", GROUP:="video"
-```
+	```
 * Save and exit
 
-```
-sudo service udev reload
-sudo service udev restart
-```
+	```
+	sudo service udev reload
+	sudo service udev restart
+	```
 
 * Unplug the camera and plug it again.
 
-```
+	```
 	cd ~/catkin_ws/src
 	git clone https://github.com/orbbec/ros_astra_camera
 	cd ..
@@ -103,25 +103,29 @@ sudo service udev restart
 	git clone https://github.com/orbbec/ros_astra_launch
 	cd ..
 	catkin_make
-```
+	```
 
 3. __Install some package for control car__
-```
+
+	```
 	sudo apt-get install libi2c-dev
 	cd ~/catkin_ws/src
-```
+	```
 * Package for control button and sensor
-```
+
+	```
 	git clone https://github.com/ducvietmta/hal_ros
-```
+	```
 * Package for control mpu_9250
-```
+
+	```
 	git clone https://github.com/ducvietmta/mpu_9250
-```
+	```
 * Package for control car (steer and speed)
-```
+
+	```
 	https://github.com/ducvietmta/car_controller
-```
+		```
 * Compile
 
 	```
