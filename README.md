@@ -119,7 +119,7 @@ We use Gitflow, so master branch is reserved for releases.
 * Package for control mpu_9250
 
 	```
-	git clone https://github.com/ducvietmta/mpu_9250
+	git clone https://github.com/RTIMULib/RTIMULib2
 	```
 * Package for control car (steer and speed)
 
