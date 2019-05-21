@@ -7,7 +7,7 @@ server ip: 192.168.1.123, default: localhost.
 Script pub mqtt for test ROS: /scripts/server_publish_demo.py
 
 Script receive mqtt -> publish ROS topic: /route
-  * data: route, ex: 5-1-2-3-4-5
+  * data: route, ex: 1-2-3-4-5
   
 Run script: rosrun subscriber publish.py
 
