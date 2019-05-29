@@ -1,0 +1,6 @@
+PCB Recommended : 
+1.PCB Thickness : 1.6mm
+2.Clearance : 6mil
+3.Min width : 6mil
+4.Via hole size - Min : 12mil
+5.Via diameter - Min : 24mil
