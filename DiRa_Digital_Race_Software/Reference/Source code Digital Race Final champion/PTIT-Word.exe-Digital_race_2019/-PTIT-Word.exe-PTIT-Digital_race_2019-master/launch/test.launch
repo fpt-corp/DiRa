@@ -1,0 +1,6 @@
+<launch>
+
+        <node name="team105" pkg="team105" type="team105_node.py" output="screen" />
+
+</launch>
+
