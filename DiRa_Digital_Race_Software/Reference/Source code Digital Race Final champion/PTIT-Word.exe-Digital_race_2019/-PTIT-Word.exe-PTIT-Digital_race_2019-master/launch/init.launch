@@ -1,0 +1,8 @@
+<launch>
+
+        <include file="$(find astra_launch)/launch/astra.launch"/>
+        <node name="team105_hal" pkg="hal" type="hal_node" output="screen" />
+        <node name="team105_car_controller" pkg="car_controller" type="car_controller_node" output="screen" />
+
+</launch>
+
