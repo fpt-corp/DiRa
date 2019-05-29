@@ -1,0 +1,9 @@
+<launch>
+
+	<include file="$(find astra_launch)/launch/astra.launch" />
+        <node name="team515" pkg="team515" type="auto_control.py" output="screen" />
+
+	<node name="hal" pkg="hal" type="hal_node" output="screen"/>
+	<node name="car_controller" pkg="car_controller" type="car_controller_node" output="screen" />
+
+</launch>
