@@ -1,0 +1,2 @@
+export OPENNI2_INCLUDE=/home/nvidia/OpenNI_2.3.0.55/Linux/OpenNI-Linux-Arm64-2.3.0.55/Include
+export OPENNI2_REDIST=/home/nvidia/OpenNI_2.3.0.55/Linux/OpenNI-Linux-Arm64-2.3.0.55/Redist
