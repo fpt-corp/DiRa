@@ -1,0 +1,13 @@
+<!-- Entry point for using OpenNI2 devices -->
+<launch>
+  <node name="run_node" pkg = "r4f" type ="r4f_node" output="screen"/>
+  <node name="Angle_node" pkg = "mpu_9250" type ="Angle.py" output="screen"/>
+  <node name="Subcriber" pkg = "subscriber" type ="publish.py" output="screen"/>
+  <node pkg="mpu_9250" type="mpu_9250_node" name="mpu_9250_node" output="screen">
+        <param name="calibration_file_path" value="$(find mpu_9250)/config"/>
+        <param name="calibration_file_name" value="RTIMULib" />
+        <param name="frame_id" value="imu"/>
+    </node>
+ 
+  <!--<node name="run" pkg = "r4f" type ="run.py" output="screen"/> -->
+</launch>

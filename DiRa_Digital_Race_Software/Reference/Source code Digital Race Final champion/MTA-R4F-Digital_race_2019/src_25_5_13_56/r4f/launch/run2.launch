@@ -1,0 +1,6 @@
+<!-- Entry point for using OpenNI2 devices -->
+<launch>
+  <node name="run_node" pkg = "r4f" type ="r4f_node" output="screen"/>
+  <node name="Angle_node" pkg = "mpu_9250" type ="Angle.py" output="screen"/>
+  <!--<node name="run" pkg = "r4f" type ="run.py" output="screen"/> -->
+</launch>
