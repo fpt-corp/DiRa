@@ -1,0 +1,37 @@
+SETUP FLASH JETSON TX2
+
+On the host computer:
+- Install Nvidia SDK Manager: https://developer.nvidia.com/embedded/downloads
+- Choose NVIDIA SDK MANAGER and download the install file
+- Run install file and install SDK Manager on the host computer
+
+*Note: having the row of 4 buttons be at the bottom left corner
+On the TX2:
+Power the TX2 and turn on Recovery Mode:
+- Turn the TX2 on via power button (4th button from the left)
+- Hold Recovery button(3rd button from left) 
+- Press Reset button(1st button from left). The light on the right of the power button should turn off
+- Release the Reset button. The light on the right of the power button should turn back on
+- Release the Recovery button
+
+Connect host computer to Jetson TX2 through USB-Micro cable
+On the host computer, check if there has been a connection with the TX2 with command: 
+$ lsusb
+The TX2 should be shown as NVidia Corp.
+
+On the host computer:
+- Open SDK Manger launcher using Ubuntu Launcher or open it from thett terminal with command: 
+$ sdkmanager
+- Login with NVIDIA account and follow the instruction (changing the hardware to Jetson TX2)
+- Install the corresponding required package for Jetson 
+*Note: This will required upto 19GB of free spaceable and flash the TX2
+- A window will appear, asking for the username and password of the TX2. Leave in be and continue to the next step
+
+On the TX2: 
+- Connect the TX2 to a monitor and setup the username/password
+
+On the host computer;
+- Enter the username/password you just set up
+- After the SDKManager has finished flashing, exit SDKManager
+*Note: after the SDKManager has finished flashing, some process of the host computer may fail. This is due to the host had already have
+the programs installed. Should it happens, just ignore it. As long as the target (TX2) is flashed, the process is considered success.
