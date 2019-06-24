@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin_ws/install
+
+Name: the_walkers
+Description: Description of the_walkers
+Version: 0.0.0
+Cflags: -I/home/nvidia/catkin_ws/install/include
+Libs: -L/home/nvidia/catkin_ws/install/lib 
+Requires: message_runtime

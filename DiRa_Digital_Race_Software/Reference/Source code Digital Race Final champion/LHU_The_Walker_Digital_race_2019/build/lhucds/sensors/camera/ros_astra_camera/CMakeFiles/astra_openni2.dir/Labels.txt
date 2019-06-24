@@ -1,0 +1,13 @@
+# Target labels
+ astra_openni2
+# Source files and their labels
+/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/CMakeFiles/astra_openni2
+/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/CMakeFiles/astra_openni2.rule
+/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/CMakeFiles/astra_openni2-complete.rule
+/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-install.rule
+/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-mkdir.rule
+/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-download.rule
+/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-update.rule
+/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-patch.rule
+/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-configure.rule
+/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-build.rule

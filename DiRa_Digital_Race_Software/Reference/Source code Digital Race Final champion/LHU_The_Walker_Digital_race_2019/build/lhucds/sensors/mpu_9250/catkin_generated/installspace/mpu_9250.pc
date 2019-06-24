@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin_ws/install
+
+Name: mpu_9250
+Description: Description of mpu_9250
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/nvidia/catkin_ws/install/lib -lmpu_9250
+Requires: roscpp sensor_msgs

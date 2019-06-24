@@ -1,0 +1,1 @@
+cmd='echo;no need to configure'

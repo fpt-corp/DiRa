@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin_ws/devel
+
+Name: astra_camera
+Description: Description of astra_camera
+Version: 0.2.0
+Cflags: -I/home/nvidia/catkin_ws/devel/include -I/home/nvidia/catkin_ws/src/lhucds/sensors/camera/ros_astra_camera/include
+Libs: -L/home/nvidia/catkin_ws/devel/lib -lastra_wrapper
+Requires: camera_info_manager dynamic_reconfigure image_transport nodelet sensor_msgs roscpp message_runtime
