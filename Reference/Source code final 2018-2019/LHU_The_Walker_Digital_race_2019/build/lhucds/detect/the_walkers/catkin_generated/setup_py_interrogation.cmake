@@ -1,0 +1,6 @@
+set(the_walkers_SETUP_PY_VERSION "0.0.0")
+set(the_walkers_SETUP_PY_SCRIPTS "")
+set(the_walkers_SETUP_PY_PACKAGES "node")
+set(the_walkers_SETUP_PY_PACKAGE_DIRS "src/node")
+set(the_walkers_SETUP_PY_MODULES "")
+set(the_walkers_SETUP_PY_MODULE_DIRS "")

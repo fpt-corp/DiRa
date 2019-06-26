@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/CMakeFiles/astra_openni2"
+		},
+		{
+			"file" : "/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/CMakeFiles/astra_openni2.rule"
+		},
+		{
+			"file" : "/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/CMakeFiles/astra_openni2-complete.rule"
+		},
+		{
+			"file" : "/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-install.rule"
+		},
+		{
+			"file" : "/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-mkdir.rule"
+		},
+		{
+			"file" : "/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-download.rule"
+		},
+		{
+			"file" : "/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-update.rule"
+		},
+		{
+			"file" : "/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-patch.rule"
+		},
+		{
+			"file" : "/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-configure.rule"
+		},
+		{
+			"file" : "/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/astra_openni2/src/astra_openni2-stamp/astra_openni2-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"astra_openni2"
+		],
+		"name" : "astra_openni2"
+	}
+}

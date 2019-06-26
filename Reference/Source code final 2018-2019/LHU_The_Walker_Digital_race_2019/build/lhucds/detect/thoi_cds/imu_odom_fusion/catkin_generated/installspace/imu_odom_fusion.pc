@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin_ws/install
+
+Name: imu_odom_fusion
+Description: Description of imu_odom_fusion
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nvidia/catkin_ws/install/lib 
+Requires: 

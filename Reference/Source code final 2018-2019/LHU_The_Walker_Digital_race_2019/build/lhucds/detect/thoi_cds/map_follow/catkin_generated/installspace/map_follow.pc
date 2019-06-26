@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin_ws/install
+
+Name: map_follow
+Description: Description of map_follow
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nvidia/catkin_ws/install/lib 
+Requires: 

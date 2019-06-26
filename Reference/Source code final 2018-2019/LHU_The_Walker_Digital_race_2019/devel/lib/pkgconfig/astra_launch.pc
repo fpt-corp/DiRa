@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin_ws/devel
+
+Name: astra_launch
+Description: Description of astra_launch
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/nvidia/catkin_ws/devel/lib 
+Requires: 

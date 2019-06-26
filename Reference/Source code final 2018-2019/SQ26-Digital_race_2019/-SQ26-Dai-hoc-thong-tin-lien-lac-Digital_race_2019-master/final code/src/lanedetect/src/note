@@ -1,0 +1,25 @@
+
+
+CvInvoke.Imshow("src", src);
+            Image<Gray, Byte> gray = src.Convert<Gray, Byte>();
+            Image<Gray, Byte> edge = gray.CopyBlank();
+            CvInvoke.Imshow("gray", gray);
+           // Image<Gray, Byte> gray = filterImage.Clone();
+            //---Diag-----
+            Matrix<float> diagl = new Matrix<float>(new float[3, 3] { { 0, 1, 1 }, { -1, 0, 1 }, { -1, -1, 0 } });
+            Matrix<float> diagr = new Matrix<float>(new float[3, 3] { { -1, -1, 0 }, { -1, 0, 1 }, { 0, 1, 1 } });
+            //---Sobel----
+            Matrix<float> sobelx = new Matrix<float>(new float[3, 3] { { -1, 0, 1 }, { -2, 0, 2 }, { -1, 0, 1 } });
+            Matrix<float> sobely = new Matrix<float>(new float[3, 3] { { -1, -2, -1 }, { 0, 0, 0 }, { 1, 2, 1 } });
+            //---Prewitt----
+            Matrix<float> kernelx = new Matrix<float>(new float[3, 3] { { 1, 1, 1 }, { 0, 0, 0 }, { -1, -1, -1 } });
+            Matrix<float> kernely = new Matrix<float>(new float[3, 3] { { -1, 0, 1 }, { -1, 0, 1 }, { -1, 0, 1 } });
+            CvInvoke.GaussianBlur(gray, gray, new Size(5, 5), 0);
+            Image<Gray, Byte> xPrewitt = gray.CopyBlank();
+            Image<Gray, Byte> yPrewitt = gray.CopyBlank();
+            CvInvoke.Filter2D(gray, xPrewitt, sobelx, new Point(-1, -1));
+            CvInvoke.Filter2D(gray, yPrewitt, sobely, new Point(-1, -1));
+            CvInvoke.BitwiseOr(xPrewitt, yPrewitt, edge);
+         
+            //gray = edge + gray;
+            CvInvoke.Imshow("edged", edge);

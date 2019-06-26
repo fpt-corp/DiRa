@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin_ws/devel
+
+Name: imu_follow
+Description: Description of imu_follow
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nvidia/catkin_ws/devel/lib 
+Requires: 

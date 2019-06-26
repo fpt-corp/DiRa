@@ -1,0 +1,6 @@
+set(imu_follow_SETUP_PY_VERSION "0.0.0")
+set(imu_follow_SETUP_PY_SCRIPTS "")
+set(imu_follow_SETUP_PY_PACKAGES "node")
+set(imu_follow_SETUP_PY_PACKAGE_DIRS "src/node")
+set(imu_follow_SETUP_PY_MODULES "")
+set(imu_follow_SETUP_PY_MODULE_DIRS "")

@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/astra_usb_reset.dir/src/usb_reset.c.o  -o /home/nvidia/catkin_ws/devel/lib/astra_camera/astra_usb_reset  -L/home/nvidia/catkin_ws/build/lhucds/sensors/camera/ros_astra_camera/openni2/Redist -rdynamic 

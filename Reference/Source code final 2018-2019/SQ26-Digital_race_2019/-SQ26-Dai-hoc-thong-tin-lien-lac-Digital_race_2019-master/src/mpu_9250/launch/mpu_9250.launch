@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="mpu_9250" type="mpu_9250" name="mpu_9250" output="screen">
+        <param name="calibration_file_path" value="$(find mpu_9250)/config"/>
+        <param name="calibration_file_name" value="RTIMULib" />
+        <param name="frame_id" value="imu"/>
+    </node>
+</launch>

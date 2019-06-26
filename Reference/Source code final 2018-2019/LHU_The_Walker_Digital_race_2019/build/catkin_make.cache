@@ -1,0 +1,2 @@
+lhucds/baithi:lhucds/detect/line_segment:lhucds/detect/the_walkers:lhucds/detect/thoi_cds/imu_log:lhucds/detect/thoi_cds/imu_odom_fusion:lhucds/detect/thoi_cds/lhu_odometry:lhucds/detect/thoi_cds/map_follow:lhucds/joy/joy_control:lhucds/master:lhucds/sensors/camera/rgbd_launch-indigo:lhucds/sensors/camera/ros_astra_camera:lhucds/sensors/camera/ros_astra_launch:lhucds/sensors/car_controller:lhucds/sensors/hal_ros:lhucds/sensors/mpu_9250
+-DCATKIN_DEVEL_PREFIX=/home/nvidia/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/catkin_ws/install -G Unix Makefiles

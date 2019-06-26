@@ -1,0 +1,8 @@
+prefix=/home/nvidia/catkin_ws/devel
+
+Name: car_controller
+Description: Description of car_controller
+Version: 0.0.0
+Cflags: -I/home/nvidia/catkin_ws/src/lhucds/sensors/car_controller/include
+Libs: -L/home/nvidia/catkin_ws/devel/lib -lcar_controller
+Requires: roscpp std_msg
