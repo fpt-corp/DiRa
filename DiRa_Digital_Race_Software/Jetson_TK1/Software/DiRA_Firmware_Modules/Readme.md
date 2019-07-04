@@ -8,7 +8,7 @@ ___
 > Control the speed and turn of the HG-P402 with Jetson TK1 via pca9685 <br/>
 ### Ubuntu version:
 > ubuntu 14.04 <br/>
-> ubutn 16.04
+> ubuntu 16.04
 
 ### Car Model:
 HGP402
