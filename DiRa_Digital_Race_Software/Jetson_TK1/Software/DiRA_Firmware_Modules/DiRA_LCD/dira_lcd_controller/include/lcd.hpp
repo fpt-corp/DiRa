@@ -34,8 +34,8 @@
 #ifndef __GNUC__
 #include <codecvt>
 #endif
-#include <cppgpio/gpio.hpp>
-#include <cppgpio/i2c.hpp>
+#include "gpio.hpp"
+#include "i2c.hpp"
 
 
 namespace GPIO {

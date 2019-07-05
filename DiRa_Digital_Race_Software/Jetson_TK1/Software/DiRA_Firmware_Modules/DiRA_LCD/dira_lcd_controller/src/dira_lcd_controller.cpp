@@ -4,8 +4,9 @@
 #include "std_msgs/Bool.h"
 #include "std_msgs/String.h"
 
-#include <cppgpio/i2c.hpp>
-#include <cppgpio/lcd.hpp>
+#include "lcd.hpp"
+#include "gpio.hpp"
+#include "i2c.hpp"
 
 using namespace GPIO;
 

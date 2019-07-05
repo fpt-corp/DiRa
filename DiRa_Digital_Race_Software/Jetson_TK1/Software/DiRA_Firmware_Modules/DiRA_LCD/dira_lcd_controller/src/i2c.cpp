@@ -32,7 +32,9 @@
 #include <unistd.h>
 #include <stdexcept>
 
-#include <cppgpio/i2c.hpp>
+#include "gpio.hpp"
+#include "lcd.hpp"
+#include "i2c.hpp"
 
 
 using namespace GPIO;
