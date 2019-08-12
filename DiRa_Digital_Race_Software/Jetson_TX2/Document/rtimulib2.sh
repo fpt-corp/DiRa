@@ -8,3 +8,4 @@ make -j4
 sudo make install
 sudo ldconfig
 sudo apt-get install i2c-tools
+sudo apt-get install libi2c-dev

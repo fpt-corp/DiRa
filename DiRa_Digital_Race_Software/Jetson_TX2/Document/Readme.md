@@ -23,27 +23,27 @@ DiRa project also provide you with the necessary packages to help you control th
 ```bash
 svn checkout https://github.com/fpt-corp/DriverlessCar_DR_ROS/trunk/core
 
-sudo cp core/* ~/catkin_ws/src/
+sudo cp -a core/* ~/catkin_ws/src/
 
 cd ~/catkin_ws/
 
 catkin_make
 
-cd /devel/lib/car_controller/
+cd ~/catkin_ws/devel/lib/car_controller/
 
 sudo chown root:root car_controller_node
 sudo chmod a+rx car_controller_node
 sudo chmod u+s car_controller_node
 
 
-cd /devel/lib/hal/
+cd ~/catkin_ws/devel/lib/hal/
 
 sudo chown root:root hal_node
 sudo chmod a+rx hal_node
 sudo chmod u+s hal_node
 
 
-cd /devel/lib/mpu_9250/
+cd ~/catkin_ws/devel/lib/mpu_9250/
 
 sudo chown root:root mpu_9250_node
 sudo chmod a+rx mpu_9250_node
