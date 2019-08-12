@@ -1,0 +1,11 @@
+1. Open two terminal tabs
+2. On 1st tab:
+```
+sudo nvpmodel -m 0 &&
+sudo ./jetson_clocks.sh &&
+roslaunch dira init.launch
+```
+3. On 2nd tab:
+```
+roslaunch dira run.launch
+
