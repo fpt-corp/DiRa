@@ -45,25 +45,27 @@ If the process is stuck, try killing it with
 	+ Initialize a new catkin workspace
 		```
 		$ cd ~/catkin_ws/src
-		
-		$ catkin_init_workspace```
+		$ catkin_init_workspace
+		```	
 	+ Build the workspace
-```
+		```
 		$ cd ~/catkin_ws
 		$ catkin_make
-```
+		```
 	*Note: catkin_ws can be any workspace name you want
 	+ Source the new setup.*sh file
-```		$ source devel/setup.bash
-```	
+		```		
+		$ source devel/setup.bash
+		```	
 	+ To source the setup.*sh file everytime we start a new bash session, we use:
-```		$ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+		```		
+		$ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 		$ source ~/.bashrc
-```	
+		```	
 	+ To ensure the workspace is properly overlay by the setup script
-```		
+		```		
 		$echo $ROS_PACKAGE_PATH /home/<user_name>/catkin_ws/src:/opt/ros/<distro>/share
-```	  
+		```	  
 	this should return the same path
 ## Orbbec Astra
 Orbbec Astra is the package that handle the connection between the device and the Orbbec Camera. You can follow the official installation guide [here](https://github.com/orbbec/ros_astra_camera)
