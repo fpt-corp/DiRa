@@ -21,8 +21,7 @@ and install following the instruction on the ROS official wiki: wiki.ros.org/<di
 	When using the command $sudo apt install ros-<distro>-desktop-full, get error:
 ```
 	  E: Could not get lock /var/lib/dpkg/lock-frontend - open(11: Resource temporarily unavailable)
-	  E: Unable to aquire the dpkg frontend lock
-```
+	  E: Unable to aquire the dpkg frontend lock```
 	This is due another process getting stuck or currently running
 	=> Solution: 
 		- Check running processes containing "apt" with: 
