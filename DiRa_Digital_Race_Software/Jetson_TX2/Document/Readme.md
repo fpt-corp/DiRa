@@ -1,20 +1,20 @@
-#Install basic dependencies
+## Install basic dependencies
 Installing all the necessary dependencies that will help your code compile
 
 ```bash
 sudo ./setup.sh
 ```
 
-# Orbbec Astra
+## Orbbec Astra
 Orbbec Astra is the package that handle the connection between the device and the Orbbec Camera. You can follow the official installation guide [here](https://github.com/orbbec/ros_astra_camera)
 
-# RTIMULib2
+## RTIMULib2
 RTIMULib2 is the library that helps you calibrate and acquire data from the IMU sensor mounted on Jetson TX2. 
 
 ```bash
 sudo ./rtimulib2.sh
 ```
-# DiRa APIs
+## DiRa APIs
 DiRa project also provide you with the necessary packages to help you control the rover better:
  hal: provide the node to control the proximity sensor at the front of the car, as well as the LCD screen and the four buttons plus a led indicator
  car_control: provide the node to control the car's speed and steering angle through the ESC
