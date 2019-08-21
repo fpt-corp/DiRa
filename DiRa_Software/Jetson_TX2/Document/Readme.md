@@ -79,9 +79,12 @@ sudo ./rtimulib2.sh
 ```
 ## DiRa APIs
 DiRa project also provide you with the necessary packages to help you control the rover better:
- hal: provide the node to control the proximity sensor at the front of the car, as well as the LCD screen and the four buttons plus a led indicator
- car_control: provide the node to control the car's speed and steering angle through the ESC
- mpu_9250: provide the node to acquire data from the IMU sensor
+
+hal: provide the node to control the proximity sensor at the front of the car, as well as the LCD screen and the four buttons plus a led indicator
+
+car_control: provide the node to control the car's speed and steering angle through the ESC
+
+mpu_9250: provide the node to acquire data from the IMU sensor
 
 ```bash
 svn checkout https://github.com/fpt-corp/DriverlessCar_DR_ROS/trunk/core
