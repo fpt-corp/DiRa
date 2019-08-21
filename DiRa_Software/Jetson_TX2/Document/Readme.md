@@ -62,12 +62,10 @@ To source the setup.*sh file everytime we start a new bash session, we use
     $ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
     $ source ~/.bashrc
 ```	
-```
-To enure the workspace i properly overlayed by the setup script
+To ensure the workspace i properly overlayed by the setup script
 ```		
     $echo $ROS_PACKAGE_PATH /home/<user_name>/catkin_ws/src:/opt/ros/<distro>/share
 ```	  
-```
 this should return the same path
 
 ## Orbbec Astra
