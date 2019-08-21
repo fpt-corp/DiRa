@@ -17,7 +17,7 @@ Choose the suitable version of ROS on the TX2:
 	+ Kinetic for Ubuntu 16.04
 	+ Melodic for Ubuntu 18.04
 and install following the instruction on the ROS official wiki: wiki.ros.org/<distro>/installation/Ubuntu
-   *Note: During the installation process, errors may occured. This part will cover some possible ones
+   *Note: During the installation process, errors may occured. This part will cover some possible ones.
 	When using the command $sudo apt install ros-<distro>-desktop-full, get error:
 ```
 	  E: Could not get lock /var/lib/dpkg/lock-frontend - open(11: Resource temporarily unavailable)
