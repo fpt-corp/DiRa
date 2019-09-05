@@ -112,5 +112,5 @@ sudo chmod u+s mpu_9250_node
 
 ```
 ## Fixing uninstalled dependencies
-Assuming you missed some steps along the process of flashing and is missing some important dependencies that was not included in the setup.sh script, it is advised that you open the Jetpack program on your host again, put your Jetson into recovery mode, connect it to your host and install the necessary dependencies by selecting them from the Jetpack UI. If, for some reason, you are unable to do so, please refer to the [Cuda installation instruction](https://github.com/fpt-corp/DiRa/blob/master/DiRa_Software/Jetson_TX2/Document/Jetson_Setup/Cuda_Installation_on_Jetson) we provided here. 
+Assuming you missed some steps along the process of flashing and is missing some important dependencies that was not included in the setup.sh script, it is advised that you open the Jetpack program on your host again, put your Jetson into recovery mode, connect it to your host and install the necessary dependencies by selecting them from the Jetpack UI. If, for some reason, you are unable to do so, please refer to the [Cuda installation instruction](https://github.com/fpt-corp/DiRa/blob/master/DiRa_Software/Jetson_TX2/Document/Jetson_Setup/Cuda%20Installation%20on%20Jetson) we provided here. 
 
