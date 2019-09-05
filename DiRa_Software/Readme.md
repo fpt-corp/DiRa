@@ -4,7 +4,7 @@
 The documents contained in this repository provide all of the information required to setup, install and run a fully functional version of the DiRa source code. This instruction is provided for two compute box, Jetson TK1 and Jetson TX2
 
 
-![alt text][note] Please contact us by opening an issue or emailing if you have any questions about the instructions, parts, or any part of the build process. My email: manhlinh.nguyendinh@gmail.com.
+Please contact us by opening an issue or emailing if you have any questions about the instructions, parts, or any part of the build process. My email: manhlinh.nguyendinh@gmail.com.
 
 ## Getting Started
 
