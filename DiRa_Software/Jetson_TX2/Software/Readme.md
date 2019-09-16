@@ -15,6 +15,10 @@ To implement the modules provided in this document, you need to have understandi
 
 Orbbec Astra's camera handling module.
 
+### [DiRa_Beacon](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/DiRa_Beacon]
+
+DiRa's beacon signal handling module
+
 ### [DiRa_Controller](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/DiRa_Controller)
 
 DiRa car's controller module
@@ -43,5 +47,18 @@ DiRa car's object detection module, which enable the controller to identify obst
 
 DiRa car's traffic sign detection module, which helps the controller detect traffic sign in the field of view and alter course accordingly
 
+### [DiRa_Lidar](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/DiRa_Lidar)
 
+DiRa 's Lidar handling module
 
+### [DiRa_Sonar](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/DiRa_Sonar)
+
+DiRa's Sonar handling module
+
+### [DiRa_Library](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/DiRa_Library)
+
+DiRa's programing libraries, which helps develop the system core and other functions.
+
+### [DiRa_Manual](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/DiRa_Manual)
+
+DiRa's manual control module, enabling you to control your car with a keyboard or joystick.
