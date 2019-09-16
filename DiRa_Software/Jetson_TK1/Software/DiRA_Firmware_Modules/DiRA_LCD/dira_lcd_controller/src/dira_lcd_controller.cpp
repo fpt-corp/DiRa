@@ -17,9 +17,13 @@ struct Point {
 };
 Point cursor;
 
+
+int i2c_address;
+
 void lcd_print(const std_msgs::String::ConstPtr& msg)
 {
-	HitachiLCD lcd(4, 20, "/dev/i2c-1", 0x27);
+    ROS_INFO("Selected address is 0x%x",i2c_address);
+    HitachiLCD lcd(4, 20, "/dev/i2c-1", i2c_address);    
     std::string str;
     str = msg->data;
     std::string segment;
@@ -39,10 +43,20 @@ void lcd_print(const std_msgs::String::ConstPtr& msg)
 }
 int main(int argc, char **argv)
 {
+    ROS_INFO("Configuring your LCD");
+    ROS_INFO("Use $sudo i2c-detect -r -y 1 command to find which port is your lcd i2c address!");
     ros::init(argc, argv, "LCD_API");
-    ros::NodeHandle nh;
+    ros::NodeHandle nh("~");
+    ros::Rate loop_rate(10);
+    nh.param("lcd_i2c_address", i2c_address, i2c_address);
+    ROS_INFO("Setting I2C address to 0x%x",i2c_address);
     ros::Subscriber sub = nh.subscribe("lcd_print", 10, lcd_print);  
-    ros::spin();
+    while (ros::ok())
+    {
+	nh.param("lcd_i2c_address", i2c_address, i2c_address);
+    ros::spinOnce();
+    loop_rate.sleep();
+	}
     return 0;
 }
 

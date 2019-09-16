@@ -34,8 +34,10 @@
     0           3.6%
     180        12.8%
 */
-#define THROTTLE_MAX_REVERSE   177//245
-#define THROTTLE_NEUTRAL       379//368
+#define THROTTLE_MAX_REVERSE   177//245 // 177
+#define THROTTLE_MIN_REVERSE   329// 329
+#define THROTTLE_NEUTRAL       379//368 //379
+#define THROTTLE_MIN_FORWARD   409//
 #define THROTTLE_MAX_FORWARD   581//491
 
 #define STEERING_MAX_RIGHT     150

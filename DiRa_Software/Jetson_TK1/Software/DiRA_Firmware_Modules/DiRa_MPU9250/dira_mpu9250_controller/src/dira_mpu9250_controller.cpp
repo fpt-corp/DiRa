@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 	ros::NodeHandle nh2;
     std::string calibration_file_path;
     
-    if(!nh.getParam("/mpu_9250/calibration_file_name", calibration_file_path))
+    if(!nh.getParam("/dira_mpu9250_controller/calibration_file_name", calibration_file_path))
     {
         ROS_ERROR("The calibration_file_path parameter must be set to use a "
                   "calibration file.");
@@ -26,14 +26,14 @@ int main(int argc, char **argv)
     }
 
     std::string calibration_file_name = "RTIMULib";
-    if(!nh.getParam("/mpu_9250/calibration_file_name", calibration_file_name))
+    if(!nh.getParam("/dira_mpu9250_controller/calibration_file_name", calibration_file_name))
     {
         ROS_WARN_STREAM("No calibration_file_name provided - default: "
                         << calibration_file_name);
     }
 
     std::string frame_id = "imu_link";
-    if(!nh.getParam("/mpu_9250/frame_id", frame_id))
+    if(!nh.getParam("/dira_mpu9250_controller/frame_id", frame_id))
     {
         ROS_WARN_STREAM("No frame_id provided - default: " << frame_id);
     }

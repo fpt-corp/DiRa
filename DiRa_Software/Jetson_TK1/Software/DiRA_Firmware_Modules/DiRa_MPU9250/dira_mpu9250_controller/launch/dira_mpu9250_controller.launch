@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="dira_mpu9250_controller" type="dira_mpu9250_controller_node" name="dira_mpu9250_controller" output="screen">
+        <param name="calibration_file_path" value="$(find dira_mpu9250_controller)/config"/>
+        <param name="calibration_file_name" value="RTIMULib" />
+        <param name="frame_id" value="imu"/>
+    </node>
+</launch>

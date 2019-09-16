@@ -11,6 +11,12 @@ int map (double x, int in_min, int in_max, int out_min, int out_max)
     return (int)(round(toReturn));
 }
 
+int map2(double x, int in_min, int in_max, int out_min, int out_max)
+{
+    double toReturn =out_min + 1.0 * (out_min - out_max) / (in_min - in_max) * (x - in_min) ;
+    return (int)(round(toReturn));
+}
+
 void api_pwm_pca9685_init( PCA9685 *pca9685)
 {
     // Initialize the PWM board
@@ -39,106 +45,94 @@ void api_pwm_pca9685_init( PCA9685 *pca9685)
 }
 
 int api_set_FORWARD_control( PCA9685 *pca9685,double &throttle_val)
-{       
+{   
+    static double previous_throttle;
     if(throttle_val > 0)
     {
-	if(direction == -1 && throttle_val > 20)
+	if(direction == -1)
 	{
-		pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_MAX_FORWARD);
-		ROS_INFO("dir value:%d",direction);
-        	usleep(187500);
+		/*		
+		pca9685->setPWM(THROTTLE_CHANNEL,0, (THROTTLE_MAX_FORWARD - THROTTLE_MIN_FORWARD)/2 + THROTTLE_NEUTRAL);
+		ROS_INFO("Breaking forward");
+                usleep(500000);
+		*/
 		pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_NEUTRAL);
 		direction = 0;
 		ROS_INFO("dir value:%d",direction);
-		usleep(187500);
+		usleep(500000);
 				
 	}
-	else if(direction == -1 && throttle_val <=20)
-	{
-		pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_MAX_FORWARD);
-		ROS_INFO("dir value:%d",direction);
-        	usleep(187500);
-		pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_NEUTRAL);
-		direction = 0;
-		ROS_INFO("dir value:%d",direction);
-		usleep(187500);
-		int pwm = map(15, 0, 100, THROTTLE_NEUTRAL, THROTTLE_MAX_FORWARD );
-		pca9685->setPWM(THROTTLE_CHANNEL,0, pwm);
-		usleep(187500);
-		
-	}
         direction = 1;
-        int pwm = map( throttle_val, 0, 100, THROTTLE_NEUTRAL, THROTTLE_MAX_FORWARD );
+        ROS_INFO("dir value:%d",direction);
+        int pwm = map( throttle_val, 0, 100, THROTTLE_MIN_FORWARD, THROTTLE_MAX_FORWARD );
 	if(pwm > THROTTLE_MAX_FORWARD)
 	{
 		pwm = THROTTLE_MAX_FORWARD;
 	}
-	
-        pca9685->setPWM(THROTTLE_CHANNEL,0, pwm);
-	ROS_INFO("forward dir value:%d pwm value:%d",direction, pwm);
+		if(previous_throttle != throttle_val)
+        {
+			pca9685->setPWM(THROTTLE_CHANNEL,0, pwm);
+	        ROS_INFO("forward dir value:%d pwm value:%d",direction, pwm);
+            previous_throttle = throttle_val;
+        }
+        
     }
     else if(throttle_val < 0)
     {
-	if(direction == 1 && throttle_val < -20)
-	{
-		pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_MAX_REVERSE);
-		ROS_INFO("dir value:%d",direction);
-		usleep(187500);
+		if(direction == 1)
+		{	
+			pca9685->setPWM(THROTTLE_CHANNEL,0, (THROTTLE_MAX_REVERSE - THROTTLE_MIN_REVERSE)/2 + THROTTLE_MIN_REVERSE);
+			ROS_INFO("Breaking backward");
+			usleep(500000);
+			pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_NEUTRAL);
+			direction = 0;
+			ROS_INFO("dir value:%d",direction);
+			usleep(500000);
+		}
+	    direction = -1;
+	    ROS_INFO("dir value:%d",direction);
+	    int pwm = map2(throttle_val, 0, -100, THROTTLE_MIN_REVERSE, THROTTLE_MAX_REVERSE);
+		if(pwm < THROTTLE_MAX_REVERSE)
+		{
+			pwm = THROTTLE_MAX_REVERSE;
+		}
+		if(previous_throttle != throttle_val)
+		{
+			pca9685->setPWM(THROTTLE_CHANNEL,0, pwm);
+			ROS_INFO("backward dir value:%d pwm value:%d",direction, pwm);
+		    previous_throttle = throttle_val;
+		}
+    }
+    else
+    {
+		if(direction == 0)
+		{
 		pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_NEUTRAL);
-		direction = 0;
 		ROS_INFO("dir value:%d",direction);
-		usleep(187500);
-	}
-	else if(direction == 1 && throttle_val >= -20)
-	{
-		pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_MAX_REVERSE);
+		usleep(1000);
+		}
+		else if(direction == 1)
+		{
+		pca9685->setPWM(THROTTLE_CHANNEL,0, (THROTTLE_MAX_REVERSE - THROTTLE_MIN_REVERSE)/2 + THROTTLE_NEUTRAL ); // (THROTTLE_MAX_REVERSE - THROTTLE_MIN_REVERSE)/2 + THROTTLE_NEUTRAL
 		ROS_INFO("dir value:%d",direction);
-		usleep(187500);
+		usleep(500000);
 		pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_NEUTRAL);
-		direction = 0;
+                usleep(500000);
 		ROS_INFO("dir value:%d",direction);
-		usleep(187500);
-		int pwm = 4096 - map( abs(-20), 0, 100 , 4096 - THROTTLE_NEUTRAL , 4096 - THROTTLE_MAX_REVERSE);
-		pca9685->setPWM(THROTTLE_CHANNEL,0, pwm);
-		usleep(187500);
-	}
-        direction = -1;
-        int pwm = 4096 - map( abs(throttle_val), 0, 100 , 4096 - THROTTLE_NEUTRAL , 4096 - THROTTLE_MAX_REVERSE);
-	if(pwm < THROTTLE_MAX_REVERSE)
-	{
-		pwm = THROTTLE_MAX_REVERSE;
-	}
-        pca9685->setPWM(THROTTLE_CHANNEL,0, pwm);
-	ROS_INFO("revese dir value:%d pwm value:%d",direction, pwm);
-    }
-}
-
-int api_set_BRAKE_control( PCA9685 *pca9685,double &throttle_val)
-{
-    if(direction == 0)
-    {
-        pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_NEUTRAL);
-	ROS_INFO("dir value:%d",direction);
-        usleep(1000);
-	direction == 0;
-    }
-    else if(direction == 1)
-    {
-        pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_MAX_REVERSE);
-	ROS_INFO("dir value:%d",direction);
-        usleep(1000);
-	pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_NEUTRAL);
-	ROS_INFO("dir value:%d",direction);
-	direction = 0;
-    }
-    else if(direction == -1)
-    {
-        pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_MAX_FORWARD);
-	ROS_INFO("dir value:%d",direction);
-        usleep(1000);
-	pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_NEUTRAL);
-	ROS_INFO("dir value:%d",direction);
-	direction = 0;
+		}
+		else if(direction == -1)
+		{
+                /*
+		pca9685->setPWM(THROTTLE_CHANNEL,0, (THROTTLE_MAX_FORWARD - THROTTLE_MIN_FORWARD)/2 + THROTTLE_NEUTRAL); //(THROTTLE_MAX_FORWARD - THROTTLE_MIN_FORWARD)/2 + THROTTLE_NEUTRAL
+		ROS_INFO("dir value:%d",direction);
+		usleep(500000);
+		*/
+		pca9685->setPWM(THROTTLE_CHANNEL,0, THROTTLE_NEUTRAL);
+        	usleep(500000);
+		ROS_INFO("dir value:%d",direction);
+		}
+		direction = 0;
+        	previous_throttle = 0;
     }
 }
 

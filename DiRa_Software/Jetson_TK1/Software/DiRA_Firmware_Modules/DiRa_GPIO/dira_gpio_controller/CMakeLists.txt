@@ -7,7 +7,7 @@ project(dira_gpio_controller)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-cmake_policy(SET CMP0054 OLD) 
+##cmake_policy(SET CMP0054 OLD) 
 #cmake_policy(SET CMP0045 NEW)
 #add_definitions(-std=c99)
 
