@@ -19,7 +19,7 @@ Contains the DiRa software architecture, consisting of a library architecture de
 
 Orbbec Astra's camera handling module.
 
-### [DiRa_Beacon](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/DiRa_Beacon]
+### [DiRa_Beacon](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/DiRa_Beacon)
 
 DiRa's beacon signal handling module
 
