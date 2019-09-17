@@ -1,0 +1,5 @@
+<launch>
+        <node name="rosserial_arduino" pkg="rosserial_arduino" type="serial_node.py"  output="screen" />
+        <node name="DiRa_Proximity" pkg="DiRa_Proximity" type="hal_node" output="screen" />
+</launch>
+

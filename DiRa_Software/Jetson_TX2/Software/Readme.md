@@ -11,6 +11,10 @@ To implement the modules provided in this document, you need to have understandi
 
 ## Included Modules:
 
+### [Architecture_Software_Design](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/Architecture_Software_Design)
+
+Contains the DiRa software architecture, consisting of a library architecture design and the ROS architecture, featuring the package order as well as the corresponding messages.
+
 ### [DiRa_Astra_Camera](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/DiRa_Astra_Camera)
 
 Orbbec Astra's camera handling module.

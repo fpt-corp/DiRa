@@ -27,4 +27,6 @@ Software Instructions for setting up the Jetson TX2
 
 Referencing informations for working with the ROS, sample codes of competing teams from past Digital Race contests.
 
+### [Arduino](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Arduino)
 
+Software instruction for setting up the Arduino IDE on Jetson boards. Only to be followed after the Jetson boards, including the DiRa software, have been properly setup.
