@@ -15,7 +15,7 @@ Tại giao diện mở chương trình
     trong đấy xxx.xxx.xxx.xxx: là ip của máy chủ ROS_MASTER
               pppp: là port sử dụng cho giao tiếp
     
-![alt text](https://github.com/fpt-corp/DiRa/blob/master/Image_Resource/simulator.png)
+![alt text](https://github.com/fpt-corp/DiRa/blob/master/Image_Resource/DiRa_Simulator_1.png)
 
     Sau khi kết nối, chương trình sẽ đếm ngược 2 phút và 
     truyền hình ảnh từ camera thu được cho ROS MASTER. Với hình ảnh thu được, 
