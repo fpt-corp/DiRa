@@ -2,7 +2,7 @@
 
 ## Cài đặt
 
-Download link: http://bit.ly/2019-simulator
+Download link: http://bit.ly/cds-simulator-2019
 
 ## Hướng dẫn sử dụng phần mềm
 
