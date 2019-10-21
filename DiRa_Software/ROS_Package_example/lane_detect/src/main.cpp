@@ -61,7 +61,7 @@ int main(int argc, char **argv)
     car = new CarControl();
 
     if (STREAM) {
-        cv::startWindowThread();
+        // cv::startWindowThread();
 
         ros::NodeHandle nh;
         image_transport::ImageTransport it(nh);
