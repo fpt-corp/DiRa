@@ -19,8 +19,4 @@ limitations under the License.
 		<param name="port" value="9090"/>
 	</include>
 
-	<node name="file_server" pkg="file_server" type="file_server" output="screen"/>
-
-	<node name="rqt_graph" pkg="rqt_graph" type="rqt_graph" output="screen" />
-
 </launch>
