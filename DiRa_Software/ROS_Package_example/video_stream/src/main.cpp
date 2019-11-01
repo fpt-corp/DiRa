@@ -40,7 +40,7 @@ int main(int argc, char **argv)
     cv::namedWindow("RGB");
     cv::namedWindow("Depth");
     
-    cv::startWindowThread();
+    // cv::startWindowThread();
 
     image_transport::ImageTransport it(nh);
     image_transport::Subscriber sub = it.subscribe("/team1/camera/rgb", 1, imageCallback);
