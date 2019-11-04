@@ -1,6 +1,6 @@
 # DiRa source code documentations
 
-This is the documentations for the DiRa Modules. They will guide you through implementing and understanding these modules
+This is the documentations for the DiRa Modules compiled from the source code of the teams from Post and Telecommunication Institute of technology. These teams, while haven't achieved the highest position, have produced the overall most complete and robust solution to the problems that will adapt well to changes in environment with minimal adjustment required. This document will guide you through implementing and understanding these modules
 
 
 ![alt text][note] Please contact us by opening an issue or emailing if you have any questions about the instructions, parts, or any part of the build process. My email: manhlinh.nguyendinh@gmail.com.
