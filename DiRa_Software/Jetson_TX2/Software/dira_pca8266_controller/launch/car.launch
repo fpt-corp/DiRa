@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+	<include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+	<!--include file="$(find rtimulib_ros)/launch/rtimulib_ros.launch"/-->
+	<node pkg="dira_pca8266_controller" type="dira_pca8266_controller_node" name="pca1" />
+</launch>
