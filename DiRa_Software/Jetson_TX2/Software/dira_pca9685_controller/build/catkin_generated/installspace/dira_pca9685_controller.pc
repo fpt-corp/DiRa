@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: dira_pca9685_controller
+Description: Description of dira_pca9685_controller
+Version: 0.0.0
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib -ldira_pca9685_controller
+Requires: roscpp std_msgs ackermann_msgs

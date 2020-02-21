@@ -1,0 +1,1 @@
+/usr/bin/g++-7 -fPIC -g  -shared -Wl,-soname,libcontroller.so -o devel/lib/libcontroller.so CMakeFiles/controller.dir/src/dira_pca9685_controller.cpp.o -Wl,-rpath,/home/ubuntu/catkin_ws/src/dira_pca8266_controller/build/devel/lib: devel/lib/libpca9685.so -li2c 

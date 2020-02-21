@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+	<node pkg="dira_pca9685_controller" type="dira_pca9685_controller_node" output = "screen" name="pca1">
+		<param name="/pwm_pca9685" value="94"/>
+	</node>
+</launch>

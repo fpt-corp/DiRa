@@ -1,0 +1,1 @@
+/usr/bin/g++-7 -fPIC -g  -shared -Wl,-soname,libpca9685.so -o devel/lib/libpca9685.so CMakeFiles/pca9685.dir/src/JHPWMPCA9685.cpp.o -li2c 

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>dira_pca9685_controller</name>
+  <version>0.0.0</version>
+  <description>The dira_pca9685_controller package</description>
+  <maintainer email="hieupm5@fpt.com.vn">hieupm5</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>ackermann_msgs</build_depend>	
+  <build_depend>std_msgs</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>ackermann_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>ackermann_msgs</exec_depend>
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>
