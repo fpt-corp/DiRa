@@ -45,7 +45,7 @@ DiRa car's traffic sign detection module, which helps the controller detect traf
 ### [dira_pca9685_controller](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/dira_pca9685_controller)
 
 DiRa car's pca9685 module to control car motor and servo for speed and steering angle.
-### [dira_gpio_controller] (https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/dira_gpio_controller)
+### [dira_gpio_controller](https://github.com/fpt-corp/DiRa/tree/master/DiRa_Software/Jetson_TX2/Software/dira_gpio_controller)
 
 DiRa car's gpio control module for LED, buttons and proximity sensors.
 
