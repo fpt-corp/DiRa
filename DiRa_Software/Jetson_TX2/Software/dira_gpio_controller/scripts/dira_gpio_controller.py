@@ -53,6 +53,7 @@ def main():
         sensor1.publish(GPIO.input(sen_pin_1))
         sensor2.publish(GPIO.input(sen_pin_2))
         rate.sleep()
-    GPIO.cleanup()
+    else:
+        GPIO.cleanup()
 if __name__ == '__main__':
     main()
